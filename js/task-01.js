@@ -1,7 +1,7 @@
 const categoriesItem = document.querySelectorAll('.item');
-console.log('В списке', categoriesItem.length, 'категории.');
+console.log(`В списке ${categoriesItem.length} категории.`);
 
-for (let elem of categoriesItem) {
-  console.log('Категория:', elem.firstElementChild.textContent);
-  console.log('Количество элементов:', elem.lastElementChild.children.length);
-}
+const category = [...categoriesItem].forEach(el => {
+  console.log('Категория:', el.firstElementChild.textContent);
+  console.log('Количество элементов:', el.lastElementChild.children.length);
+});
