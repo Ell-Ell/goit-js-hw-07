@@ -22,10 +22,10 @@ function createBoxes(amount) {
   boxes.appendChild(fragment);
 }
 function destroyBoxes() {
-  boxes.innerHTML = ''; // Очистить
+  boxes.innerHTML = ''; 
 }
 function random() {
-  return Math.random() * 256; // рандомний цвет
+  return Math.random() * 256; 
 }
 function plusAmount() {
   getAmount();
