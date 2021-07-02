@@ -14,11 +14,19 @@ const images = [
   },
 ];
 
-const galleryListEl = document.querySelector('#gallery');
+const galleryListEl = document.querySelector("#gallery");
 
-galleryListEl.innerHTML = images
-  .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`)
-  .join('');
+galleryListEl.insertAdjacentHTML(
+  "afterbegin",
+  images
+    .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`)
+    .join("")
+);
+// const galleryListEl = document.querySelector('#gallery');
+
+// galleryListEl.innerHTML = images
+//   .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`)
+//   .join('');
 
 // galleryListEl.insertAdjacentHTML(
 //   'afterbegin',
