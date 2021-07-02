@@ -1,12 +1,9 @@
 
-const inputRef: document.querySelector('#name-input');
-const outputRef: document.querySelector('#name-output');
+const inputRef = document.querySelector('#name-input');
+const nameLabelRef = document.querySelector('#name-output');
 
-
-
-function onInputChange(event) {
-    return inputRef.value.lenght >= 1
-        ? (outputRef.textContent = event.currentTarget.value)
-        : (outputRef.textContent = 'незнакомец' )
-};
-inputRef.addEventListener('input', onInputChange);
+inputRef.addEventListener('input', event => {
+  event.target.value === ''
+    ? (nameLabelRef.textContent = 'незнакомец')
+    : (nameLabelRef.textContent = event.target.value);
+});
